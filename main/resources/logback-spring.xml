@@ -1,0 +1,15 @@
+<configuration>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                time=%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ}|level=%-5level|event_typ=HTTP|uom_cod=20000|app_id=VIRINST|component_id=msipen03|corr_id=%X{CORRELATION_ID:--}|thread=%thread|ip=%X{IP_FORWARD:--}|msg=%msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>
